@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.hospital</groupId>
-    <artifactId>Test_Field_Assignment</artifactId>
+    <artifactId>Finding-Hospitals</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>

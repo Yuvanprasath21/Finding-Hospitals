@@ -1,4 +1,4 @@
 package org.hospital.pages;
 
-public class DoctorsLogin {
+public class DiagnosticsPage {
 }
