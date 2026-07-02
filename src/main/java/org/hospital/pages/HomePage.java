@@ -27,11 +27,8 @@ public class HomePage extends CommonCode{
         location.click();
         location.sendKeys(Keys.CONTROL + "a");
         location.sendKeys(Keys.DELETE);
-
         location.sendKeys("Bangalore");
-
         wait.until(ExpectedConditions.visibilityOf(suggestionValueOfBangalore));
-
         suggestionValueOfBangalore.click();
     }
 
