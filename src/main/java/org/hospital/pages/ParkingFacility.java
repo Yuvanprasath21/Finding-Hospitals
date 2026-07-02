@@ -20,10 +20,6 @@ public class ParkingFacility extends CommonCode{
 
     public void getLocations(){
         for(WebElement lc : locations){
-            driver.switchTo().window(win);
-            String hosName = driver.getTitle();
-            String[] arr = hosName.split(",");
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Read more info']"))).click();
             System.out.println(lc.getText());
         }
     }
@@ -64,7 +60,7 @@ public class ParkingFacility extends CommonCode{
                 driver.switchTo().window(win);
                 String hosName = driver.getTitle();
                 String[] arr = hosName.split(",");
-                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Read more info']"))).click();
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()="+service+"'Read more info']"))).click();
                 boolean check = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[starts-with(@class,'pure-g u-spacer--top ')]//div[@data-qa-id='amenities_list']//span[text()='Parking']"))).isDisplayed();
                 if(check){
                     System.out.print(arr[0]+" -> ");
