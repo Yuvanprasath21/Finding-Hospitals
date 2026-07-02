@@ -6,8 +6,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 
 import java.io.File;
 import java.io.FileReader;
@@ -21,7 +21,7 @@ public class BaseTest {
     protected static WebDriverWait wait;
     public Properties properties;
 
-    @BeforeClass
+    @BeforeTest
     public void setDriver() throws IOException{
 
         FileReader fileReader =new FileReader(".//src//test//resources//config.properties");
@@ -32,11 +32,10 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get(properties.getProperty("website_url"));
         driver.manage().window().maximize();
-
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
-    @AfterClass
+    @AfterTest
     public void tearDown() {
         driver.quit();
     }
