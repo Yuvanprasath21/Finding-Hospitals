@@ -36,6 +36,7 @@ public class ParkingFacility extends CommonCode{
 
     public void navigateHospital(){
         mainWin = driver.getWindowHandle();
+        Assert.assertTrue(hospitalName.size() > 0, "No hospital links available to click!");
         for(WebElement hn : hospitalName){
             hn.click();
         }
@@ -73,6 +74,8 @@ public class ParkingFacility extends CommonCode{
                 driver.close();
             }
         }
+        Assert.assertTrue(count > 0, "None of the checked hospitals had the Parking amenity!");
+        System.out.println("Total hospitals with parking: " + count);
         System.out.println(count);
     }
 }

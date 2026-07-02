@@ -4,8 +4,8 @@ import org.testng.annotations.Test;
 
 @Test
 public class TC_06_GetLocation extends BaseTest {
-    public void location() {
+    public void getlocation() {
         ParkingFacility park =new ParkingFacility(driver);
-        park.getLocations();
+        Assert.assertFalse(park.getLocations().isEmpty(), "No hospital locations were found on the page!");
     }
 }

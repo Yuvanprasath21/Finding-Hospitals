@@ -6,6 +6,6 @@ import org.testng.annotations.Test;
 public class TC_06_GetSpecialist extends BaseTest {
     public void specialist() {
         ParkingFacility park =new ParkingFacility(driver);
-        park.getSpecialist();
+        Assert.assertFalse(park.getSpecialist().isEmpty(), "No specialists were found on the page!");
     }
 }
