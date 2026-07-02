@@ -32,7 +32,6 @@ public class BaseTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.get(properties.getProperty("website_url"));
         driver.manage().window().maximize();
-
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
     }
 
