@@ -1,0 +1,30 @@
+03-07-2026 18:10:11 [main] INFO  TC_01_LocationAndService - Initializing Chrome Driver
+03-07-2026 18:10:16 [main] INFO  TC_01_LocationAndService - Launching URL: https://www.practo.com/
+03-07-2026 18:10:18 [main] INFO  TC_01_LocationAndService - Browser maximized successfully
+03-07-2026 18:10:18 [main] INFO  TC_01_LocationAndService - Driver setup completed
+03-07-2026 18:10:18 [main] INFO  TC_01_LocationAndService - Starting Location and Service validation
+03-07-2026 18:10:18 [main] INFO  TC_01_LocationAndService - Verifying website URL
+03-07-2026 18:10:18 [main] INFO  TC_01_LocationAndService - Website URL verified successfully
+03-07-2026 18:10:18 [main] INFO  TC_01_LocationAndService - Selecting city: mumbai
+03-07-2026 18:10:29 [main] INFO  TC_01_LocationAndService - Selecting service: hospital
+03-07-2026 18:10:35 [main] INFO  TC_01_LocationAndService - Verifying search results page
+03-07-2026 18:10:35 [main] INFO  TC_01_LocationAndService - Location and Service validation completed successfully
+03-07-2026 18:10:35 [main] INFO  TC_02_HospitalCount - Verifying hospital count availability
+03-07-2026 18:10:35 [main] INFO  TC_02_HospitalCount - Hospital count element is displayed
+03-07-2026 18:10:35 [main] INFO  TC_02_HospitalCount - Retrieved hospital count: 1165
+03-07-2026 18:10:35 [main] INFO  TC_02_HospitalCount - Hospital count validation completed successfully
+03-07-2026 18:10:35 [main] INFO  TC_03_Open24x7Hospitals - Retrieving hospitals operating 24x7
+03-07-2026 18:10:38 [main] INFO  TC_03_Open24x7Hospitals - Found 10 hospitals operating 24x7
+03-07-2026 18:10:38 [main] INFO  TC_03_Open24x7Hospitals - 24x7 hospitals validation completed successfully
+03-07-2026 18:10:38 [main] INFO  TC_03_Open24x7Hospitals - Hospitals operating 24x7: [Dr L H Hiranandani Hospital, Wockhardt Hospitals (formerly known as Umrao Hospital), Cloudnine Hospital, Criticare Asia Multispeciality Hospital & Research Centre, Phoenix Hospital, Parel Hospital, Nanavati Max Super Speciality Hospital, Marvel Multispeciality Hospital, Greenview Medical Center, Vasan Eye Care]
+03-07-2026 18:10:38 [main] INFO  TC_04_HighRatedHospitals - Retrieving hospitals with rating greater than 3.5
+03-07-2026 18:10:49 [main] WARN  SearchResultPage - Skipping (no rating shown): Parel Hospital
+03-07-2026 18:10:49 [main] INFO  TC_04_HighRatedHospitals - Found 10 hospitals with rating greater than 3.5
+03-07-2026 18:10:49 [main] INFO  TC_04_HighRatedHospitals - High-rated hospitals validation completed successfully
+03-07-2026 18:10:49 [main] INFO  TC_04_HighRatedHospitals - Hospitals with rating greater than 3.5: [Dr L H Hiranandani Hospital, Wockhardt Hospitals (formerly known as Umrao Hospital), Cloudnine Hospital, Parchure Nursing Home, Dr. Jonwal's NapAyurVeda Panchkarm & Wellness, Criticare Asia Multispeciality Hospital & Research Centre, Phoenix Hospital, Adarsh Hospital, Nanavati Max Super Speciality Hospital, Devi-Eye-Hospitals.]
+03-07-2026 18:10:49 [main] INFO  TC_05_BookVisitButton - Verifying Book Visit button clickability
+03-07-2026 18:10:59 [main] WARN  SearchResultPage - Skipping (no book button): Parel Hospital
+03-07-2026 18:11:00 [main] INFO  TC_05_BookVisitButton - All Book Visit buttons are clickable
+03-07-2026 18:11:00 [main] INFO  TC_05_BookVisitButton - Button clickability validation completed successfully
+03-07-2026 18:11:00 [main] INFO  TC_01_LocationAndService - Closing browser
+03-07-2026 18:11:04 [main] INFO  TC_01_LocationAndService - Browser closed successfully

@@ -22,13 +22,9 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//div[@data-qa-id='omni-suggestion-entire-city']")
     WebElement searchInEntireCity;
 
-    private String capitalize(String text) {
-        return text.substring(0, 1).toUpperCase() + text.substring(1).toLowerCase();
-    }
-
     public void findAndClickCity(String city) {
 
-        city = capitalize(city);// toUpperCase
+        city = capitalize(city);
         locationSearchBox.click();
         locationSearchBox.sendKeys(Keys.CONTROL + "a");
         locationSearchBox.sendKeys(Keys.DELETE);
@@ -41,7 +37,7 @@ public class HomePage extends BasePage {
         }
         catch (Exception e) {
             WebElement citySuggestion = wait.until(ExpectedConditions
-                            .elementToBeClickable(searchInEntireCity));
+                                            .elementToBeClickable(searchInEntireCity));
             citySuggestion.click();
         }
     }

@@ -8,19 +8,22 @@ import org.testng.annotations.Test;
 @Test
 public class TC_02_HospitalCount extends BaseTest {
     public void verify_data() {
-        SearchResultPage searchResultPage=new SearchResultPage(driver);
+        logger.info("Verifying hospital count availability");
+        SearchResultPage searchResultPage = new SearchResultPage(driver);
         boolean isVisible = searchResultPage.isElementVisible();
         Assert.assertTrue(
                 isVisible,
                 "Hospital Count is not displayed"
         );
+        logger.info("Hospital count element is displayed");
         int count = Integer.parseInt(
                 searchResultPage.countOfHospitals()
         );
+        logger.info("Retrieved hospital count: {}", count);
         Assert.assertTrue(
-                count>0,
+                count > 0,
                 "Hospital count is zero. Result is empty."
         );
-        System.out.println("Count of Hospitals: "+count);
+        logger.info("Hospital count validation completed successfully");
     }
 }

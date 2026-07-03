@@ -7,13 +7,15 @@ import org.testng.annotations.Test;
 
 @Test
 public class TC_05_BookVisitButton extends BaseTest {
-    public void verify_button(){
+    public void verify_button() {
+        logger.info("Verifying Book Visit button clickability");
         SearchResultPage searchResultPage = new SearchResultPage(driver);
         boolean isClickable = searchResultPage.areButtonsClickable();
         Assert.assertTrue(
                 isClickable,
                 "Buttons are not clickable"
         );
-        System.out.println("Are all buttons clickable: "+isClickable);
+        logger.info("All Book Visit buttons are clickable");
+        logger.info("Button clickability validation completed successfully");
     }
 }

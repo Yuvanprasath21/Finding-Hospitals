@@ -23,8 +23,12 @@ public class SearchResultPage extends BasePage {
         return title.isDisplayed();
     }
 
+    public String getTitle(){
+        return title.getText();
+    }
+
     public String countOfHospitals(){
-        return title.getText()
+        return getTitle()
                 .split(" ")[0]
                 .replace(",", "");
     }
@@ -34,17 +38,21 @@ public class SearchResultPage extends BasePage {
         scrollCount = 0;
         scrollToTop();
         while (hospitalNames.size() < TARGET_COUNT && scrollCount < MAX_SCROLL_COUNT) {
-            List<WebElement> hospitals = driver.findElements(By.xpath(HOSPITAL_LIST));
+            List<WebElement> hospitals = driver.findElements(
+                    By.xpath(HOSPITAL_LIST)
+            );
             for (WebElement hospital : hospitals) {
                 try {
                     if (hospital.getText().contains(OPEN_24_X_7)) {
-                        String name = hospital.findElement(By.xpath(HOSPITAL_NAME)).getText();
+                        String name = hospital.findElement(
+                                By.xpath(HOSPITAL_NAME)
+                        ).getText();
                         hospitalNames.add(name);
                         if (hospitalNames.size() == TARGET_COUNT)
                             break;
                     }
                 } catch (Exception e) {
-                    System.out.println("Skipping hospital:\n" + e.getMessage());
+                    logger.warn("Skipping hospital: {}", e.getMessage());
                 }
             }
             WebElement lastHospital = hospitals.getLast();
@@ -59,7 +67,9 @@ public class SearchResultPage extends BasePage {
         scrollCount = 0;
         scrollToTop();
         while (hospitalNames.size() < TARGET_COUNT && scrollCount < MAX_SCROLL_COUNT) {
-            List<WebElement> hospitals = driver.findElements(By.xpath(HOSPITAL_LIST));
+            List<WebElement> hospitals = driver.findElements(
+                    By.xpath(HOSPITAL_LIST)
+            );
             for (WebElement hospital : hospitals) {
                 String name=null;
                 try {
@@ -77,13 +87,15 @@ public class SearchResultPage extends BasePage {
                     }
                 }
                 catch (NoSuchElementException e) {
-                    System.out.println("Skipping (no rating shown): " + name);
+                    logger.warn("Skipping (no rating shown): {}", name);
                 }
                 catch (NumberFormatException e) {
-                    System.out.println("Skipping (rating not a number): " + name);
+                    logger.warn("Skipping (rating not a number): {}", name);
                 }
                 catch (Exception e) {
-                    System.out.println("Skipping (unexpected): " + name + " → " + e.getClass().getSimpleName());
+                    logger.warn("Skipping (unexpected): {} : {}",
+                            name,
+                            e.getClass().getSimpleName());
                 }
             }
             WebElement lastHospital = hospitals.getLast();
@@ -98,14 +110,20 @@ public class SearchResultPage extends BasePage {
         scrollCount = 0;
         scrollToTop();
         while (hospitalNames.size() < TARGET_COUNT && scrollCount < MAX_SCROLL_COUNT) {
-            List<WebElement> hospitals = driver.findElements(By.xpath(HOSPITAL_LIST));
+            List<WebElement> hospitals = driver.findElements(
+                    By.xpath(HOSPITAL_LIST)
+            );
             for (WebElement hospital : hospitals) {
                 String name = null;
                 try {
-                    name = hospital.findElement(By.xpath(HOSPITAL_NAME)).getText();
-                    List<WebElement> buttons = hospital.findElements(By.xpath(BOOK_VISIT_BUTTON));
+                    name = hospital.findElement(
+                            By.xpath(HOSPITAL_NAME)
+                    ).getText();
+                    List<WebElement> buttons = hospital.findElements(
+                            By.xpath(BOOK_VISIT_BUTTON)
+                    );
                     if (buttons.isEmpty()) {
-                        System.out.println("Skipping (no book button): " + name);
+                        logger.warn("Skipping (no book button): {}", name);
                         continue;
                     }
                     WebElement button = buttons.getFirst();
@@ -117,10 +135,12 @@ public class SearchResultPage extends BasePage {
                         break;
                 }
                 catch (NoSuchElementException e) {
-                    System.out.println("Skipping (no name shown): " + name);
+                    logger.warn("Skipping (no name shown): {}", name);
                 }
                 catch (Exception e) {
-                    System.out.println("Skipping (unexpected): " + name + " → " + e.getClass().getSimpleName());
+                    logger.warn("Skipping (unexpected): {} : {}",
+                            name,
+                            e.getClass().getSimpleName());
                 }
             }
             WebElement lastHospital = hospitals.getLast();
