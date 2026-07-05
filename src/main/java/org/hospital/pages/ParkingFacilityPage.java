@@ -35,7 +35,7 @@ public class ParkingFacilityPage extends BasePage {
     @FindBy(className = "listing-doctor-card")
     List<WebElement> doctorCard;
 
-    public SearchResultPage(WebDriver driver) {
+    public ParkingFacilityPage(WebDriver driver) {
         super(driver);
     }
 
