@@ -98,7 +98,7 @@ public class DiagnosticsPage extends BasePage {
     }
 
     public void clickFeverCard() {
-        slowScrollToElement(feverCard);
+        //slowScrollToElement(feverCard);
         wait.until(ExpectedConditions.visibilityOf(feverCard));
         clickByJS(feverCard);
     }
@@ -132,7 +132,7 @@ public class DiagnosticsPage extends BasePage {
     }
 
     public void clickAddToCart() {
-        slowScrollToElement(addToCartButton);
+        //slowScrollToElement(addToCartButton);
         wait.until(ExpectedConditions.visibilityOf(addToCartButton));
         clickByJS(addToCartButton);
     }

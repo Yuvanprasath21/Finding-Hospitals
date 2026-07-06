@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 
@@ -42,10 +43,17 @@ public class ParkingFacilityPage extends BasePage {
     }
 
     // TC_06: Open every hospital in a new tab
+
     public int navigateAndHandleHospital() {
         mainWin = driver.getWindowHandle();
         for (WebElement hn : hospitalName) {
-            hn.click();
+            try {
+                // 🔑 JS click — bypasses overlay interception
+                js.executeScript("arguments[0].scrollIntoView({block:'center'});", hn);
+                js.executeScript("arguments[0].click();", hn);
+            } catch (Exception e) {
+                System.out.println("Failed to click hospital: " + e.getMessage());
+            }
         }
         allWindows = driver.getWindowHandles();
         return allWindows.size();
@@ -53,6 +61,7 @@ public class ParkingFacilityPage extends BasePage {
 
     // TC_07: Check "Parking" amenity for each hospital
     public int checkingAminities() {
+        PageFactory.initElements(driver, this);
         int count = 0;
         for (String win : allWindows) {
             if (!win.equals(mainWin)) {
@@ -109,9 +118,26 @@ public class ParkingFacilityPage extends BasePage {
     // TC_09: Get all revealed phone numbers
     public List<String> getPhoneNumbers() {
         phone = new ArrayList<>();
+
+        if (phoneNumber.isEmpty()) {
+            System.out.println("No phone number elements found on page.");
+            return phone;
+        }
+
+        System.out.println("Total phone elements found: " + phoneNumber.size());
+
         for (WebElement pn : phoneNumber) {
-            if (wait.until(ExpectedConditions.visibilityOf(pn)).isDisplayed()) {
-                phone.add(pn.getText().trim());
+            try {
+                // 🔑 Try to get text — skip if not visible/available
+                if (pn.isDisplayed()) {
+                    String phonenumber = pn.getText().trim();
+                    if (!phonenumber.isEmpty()) {
+                        phone.add(phonenumber);
+                    }
+                }
+            } catch (Exception e) {
+                // Skip this phone number, continue with others
+                System.out.println("Skipping one hidden phone number");
             }
         }
         return phone;

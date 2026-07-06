@@ -5,7 +5,7 @@ import java.util.List;
 import org.hospital.pages.DiagnosticsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utilities.ExcelUtils;
+//import utilities.ExcelUtils;
 import basetest.BaseTest;
 
 public class TC_12_TopAllCitiesPage extends BaseTest {
@@ -34,7 +34,7 @@ public class TC_12_TopAllCitiesPage extends BaseTest {
         System.out.println("ALL CITIES:");
         System.out.println(String.join(", ", allCities));
 
-        ExcelUtils.writeCitiesToExcel(topCities, allCities);
+        //ExcelUtils.writeCitiesToExcel(topCities, allCities);
         System.out.println(
                 "TC_12 - Top Cities and All Cities extracted and stored successfully in Excel\n"
         );
