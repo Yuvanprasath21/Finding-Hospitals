@@ -2,18 +2,15 @@ package basetest;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import org.hospital.pages.HomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import utilities.ConfigReader;
 
-import java.io.File;
-import java.io.IOException;
+
 import java.time.Duration;
 
 public class BaseTest {
@@ -22,7 +19,7 @@ public class BaseTest {
     protected static WebDriverWait wait;
     protected final Logger logger = LogManager.getLogger(getClass());
 
-    @BeforeTest
+    @BeforeClass
     public void setDriver() {
         logger.info("Initializing Chrome Driver");
         driver = new ChromeDriver();
@@ -36,7 +33,19 @@ public class BaseTest {
         logger.info("Driver setup completed");
     }
 
-    @AfterTest
+    protected void navigateToSearchResults() {
+        HomePage homePage = new HomePage(driver);
+
+        String city = ConfigReader.getProperty("city");
+        logger.info("Selecting city: {}", city);
+        homePage.findAndClickCity(city);
+
+        String service = ConfigReader.getProperty("service");
+        logger.info("Selecting service: {}", service);
+        homePage.findAndClickService(service);
+    }
+
+    @AfterClass
     public void tearDown() {
         logger.info("Closing browser");
         if(driver != null){

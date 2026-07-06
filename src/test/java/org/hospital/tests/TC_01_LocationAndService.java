@@ -10,8 +10,9 @@ import utilities.ConfigReader;
 @Test
 public class TC_01_LocationAndService extends BaseTest {
     public void getHospitals() {
+        logger.info("Starting : " + this.getClass().getSimpleName());
         logger.info("Starting Location and Service validation");
-        HomePage homePage =new HomePage(driver);
+
         String websiteUrl = ConfigReader.getProperty("website_url");
         logger.info("Verifying website URL");
         Assert.assertEquals(
@@ -20,12 +21,15 @@ public class TC_01_LocationAndService extends BaseTest {
                 "WebsiteURL is wrong"
         );
         logger.info("Website URL verified successfully");
+
+        HomePage homePage =new HomePage(driver);
         String city = ConfigReader.getProperty("city");
         logger.info("Selecting city: {}", city);
         homePage.findAndClickCity(city);
         String service = ConfigReader.getProperty("service");
         logger.info("Selecting service: {}", service);
         homePage.findAndClickService(service);
+
         SearchResultPage searchResultPage = new SearchResultPage(driver);
         String title = searchResultPage.getTitle().toLowerCase();
         logger.info("Verifying search results page");
@@ -34,5 +38,6 @@ public class TC_01_LocationAndService extends BaseTest {
                 ,"Page is not loaded correctly for location and service"
         );
         logger.info("Location and Service validation completed successfully");
+        logger.info("Ending : " + this.getClass().getSimpleName());
     }
 }

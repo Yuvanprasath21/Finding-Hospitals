@@ -28,3 +28,221 @@
 03-07-2026 18:11:00 [main] INFO  TC_05_BookVisitButton - Button clickability validation completed successfully
 03-07-2026 18:11:00 [main] INFO  TC_01_LocationAndService - Closing browser
 03-07-2026 18:11:04 [main] INFO  TC_01_LocationAndService - Browser closed successfully
+06-07-2026 15:52:59 [main] INFO  TC_01_LocationAndService - Initializing Chrome Driver
+06-07-2026 15:53:03 [main] INFO  TC_01_LocationAndService - Launching URL: https://www.practo.com/
+06-07-2026 15:53:11 [main] INFO  TC_01_LocationAndService - Browser maximized successfully
+06-07-2026 15:53:11 [main] INFO  TC_01_LocationAndService - Driver setup completed
+06-07-2026 15:53:11 [main] INFO  TC_01_LocationAndService - Starting Location and Service validation
+06-07-2026 15:53:11 [main] INFO  TC_01_LocationAndService - Verifying website URL
+06-07-2026 15:53:11 [main] INFO  TC_01_LocationAndService - Website URL verified successfully
+06-07-2026 15:53:11 [main] INFO  TC_01_LocationAndService - Selecting city: mumbai
+06-07-2026 15:53:22 [main] INFO  TC_01_LocationAndService - Selecting service: hospital
+06-07-2026 15:53:30 [main] INFO  TC_01_LocationAndService - Verifying search results page
+06-07-2026 15:53:30 [main] INFO  TC_01_LocationAndService - Location and Service validation completed successfully
+06-07-2026 15:53:30 [main] INFO  TC_01_LocationAndService - Closing browser
+06-07-2026 15:53:34 [main] INFO  TC_01_LocationAndService - Browser closed successfully
+06-07-2026 15:53:34 [main] INFO  TC_02_HospitalCount - Initializing Chrome Driver
+06-07-2026 15:53:37 [main] INFO  TC_02_HospitalCount - Launching URL: https://www.practo.com/
+06-07-2026 15:53:43 [main] INFO  TC_02_HospitalCount - Browser maximized successfully
+06-07-2026 15:53:43 [main] INFO  TC_02_HospitalCount - Driver setup completed
+06-07-2026 15:53:43 [main] INFO  TC_02_HospitalCount - Verifying hospital count availability
+06-07-2026 15:53:53 [main] INFO  TC_02_HospitalCount - Hospital count element is displayed
+06-07-2026 15:53:53 [main] INFO  TC_02_HospitalCount - Retrieved hospital count: 1165
+06-07-2026 15:53:53 [main] INFO  TC_02_HospitalCount - Hospital count validation completed successfully
+06-07-2026 15:53:53 [main] INFO  TC_02_HospitalCount - Closing browser
+06-07-2026 15:53:55 [main] INFO  TC_02_HospitalCount - Browser closed successfully
+06-07-2026 15:53:55 [main] INFO  TC_03_Open24x7Hospitals - Initializing Chrome Driver
+06-07-2026 15:53:59 [main] INFO  TC_03_Open24x7Hospitals - Launching URL: https://www.practo.com/
+06-07-2026 15:54:06 [main] INFO  TC_03_Open24x7Hospitals - Browser maximized successfully
+06-07-2026 15:54:06 [main] INFO  TC_03_Open24x7Hospitals - Driver setup completed
+06-07-2026 15:54:06 [main] INFO  TC_03_Open24x7Hospitals - Retrieving hospitals operating 24x7
+06-07-2026 15:54:22 [main] INFO  TC_03_Open24x7Hospitals - Found 10 hospitals operating 24x7
+06-07-2026 15:54:22 [main] INFO  TC_03_Open24x7Hospitals - 24x7 hospitals validation completed successfully
+06-07-2026 15:54:22 [main] INFO  TC_03_Open24x7Hospitals - Hospitals operating 24x7: [Manipal Hospital Varthur Road (formerly Columbia Asia Hospital), Manipal Hospitals, Koshys Hospital, Motherhood Hospital, Sagar Hospitals, Apollo Cradle & Children’s Hospital, Manipal Hospital, Cloudnine Hospital - Old Airport Road, Marvel Multispeciality Hospital, Greenview Medical Center]
+06-07-2026 15:54:22 [main] INFO  TC_03_Open24x7Hospitals - Closing browser
+06-07-2026 15:54:26 [main] INFO  TC_03_Open24x7Hospitals - Browser closed successfully
+06-07-2026 15:54:26 [main] INFO  TC_04_HighRatedHospitals - Initializing Chrome Driver
+06-07-2026 15:54:29 [main] INFO  TC_04_HighRatedHospitals - Launching URL: https://www.practo.com/
+06-07-2026 15:54:36 [main] INFO  TC_04_HighRatedHospitals - Browser maximized successfully
+06-07-2026 15:54:36 [main] INFO  TC_04_HighRatedHospitals - Driver setup completed
+06-07-2026 15:54:36 [main] INFO  TC_04_HighRatedHospitals - Retrieving hospitals with rating greater than 3.5
+06-07-2026 15:55:04 [main] WARN  SearchResultPage - Skipping (no rating shown): Parel Hospital
+06-07-2026 15:55:15 [main] WARN  SearchResultPage - Skipping (no rating shown): Parel Hospital
+06-07-2026 15:55:25 [main] WARN  SearchResultPage - Skipping (no rating shown): Parel Hospital
+06-07-2026 15:55:26 [main] INFO  TC_04_HighRatedHospitals - Found 10 hospitals with rating greater than 3.5
+06-07-2026 15:55:26 [main] INFO  TC_04_HighRatedHospitals - High-rated hospitals validation completed successfully
+06-07-2026 15:55:26 [main] INFO  TC_04_HighRatedHospitals - Hospitals with rating greater than 3.5: [Dr L H Hiranandani Hospital, Wockhardt Hospitals (formerly known as Umrao Hospital), Cloudnine Hospital, Parchure Nursing Home, Dr. Jonwal's NapAyurVeda Panchkarm & Wellness, Criticare Asia Multispeciality Hospital & Research Centre, Phoenix Hospital, Adarsh Hospital, Nanavati Max Super Speciality Hospital, Devi-Eye-Hospitals.]
+06-07-2026 15:55:26 [main] INFO  TC_04_HighRatedHospitals - Closing browser
+06-07-2026 15:55:30 [main] INFO  TC_04_HighRatedHospitals - Browser closed successfully
+06-07-2026 15:55:30 [main] INFO  TC_05_BookVisitButton - Initializing Chrome Driver
+06-07-2026 15:55:33 [main] INFO  TC_05_BookVisitButton - Launching URL: https://www.practo.com/
+06-07-2026 15:55:38 [main] INFO  TC_05_BookVisitButton - Browser maximized successfully
+06-07-2026 15:55:38 [main] INFO  TC_05_BookVisitButton - Driver setup completed
+06-07-2026 15:55:38 [main] INFO  TC_05_BookVisitButton - Verifying Book Visit button clickability
+06-07-2026 15:56:09 [main] WARN  SearchResultPage - Skipping (no book button): Parel Hospital
+06-07-2026 15:56:20 [main] WARN  SearchResultPage - Skipping (no book button): Parel Hospital
+06-07-2026 15:56:32 [main] WARN  SearchResultPage - Skipping (no book button): Parel Hospital
+06-07-2026 15:56:32 [main] INFO  TC_05_BookVisitButton - All Book Visit buttons are clickable
+06-07-2026 15:56:32 [main] INFO  TC_05_BookVisitButton - Button clickability validation completed successfully
+06-07-2026 15:56:32 [main] INFO  TC_05_BookVisitButton - Closing browser
+06-07-2026 15:56:38 [main] INFO  TC_05_BookVisitButton - Browser closed successfully
+06-07-2026 15:58:29 [main] INFO  TC_01_LocationAndService - Initializing Chrome Driver
+06-07-2026 15:58:36 [main] INFO  TC_01_LocationAndService - Launching URL: https://www.practo.com/
+06-07-2026 15:58:44 [main] INFO  TC_01_LocationAndService - Browser maximized successfully
+06-07-2026 15:58:44 [main] INFO  TC_01_LocationAndService - Driver setup completed
+06-07-2026 15:58:44 [main] INFO  TC_01_LocationAndService - Running :TC_01_LocationAndService
+06-07-2026 15:58:44 [main] INFO  TC_01_LocationAndService - Starting Location and Service validation
+06-07-2026 15:58:44 [main] INFO  TC_01_LocationAndService - Verifying website URL
+06-07-2026 15:58:44 [main] INFO  TC_01_LocationAndService - Website URL verified successfully
+06-07-2026 15:58:44 [main] INFO  TC_01_LocationAndService - Selecting city: mumbai
+06-07-2026 15:58:55 [main] INFO  TC_01_LocationAndService - Selecting service: hospital
+06-07-2026 15:59:03 [main] INFO  TC_01_LocationAndService - Verifying search results page
+06-07-2026 15:59:03 [main] INFO  TC_01_LocationAndService - Location and Service validation completed successfully
+06-07-2026 15:59:03 [main] INFO  TC_01_LocationAndService - Closing browser
+06-07-2026 15:59:09 [main] INFO  TC_01_LocationAndService - Browser closed successfully
+06-07-2026 15:59:09 [main] INFO  TC_02_HospitalCount - Initializing Chrome Driver
+06-07-2026 15:59:14 [main] INFO  TC_02_HospitalCount - Launching URL: https://www.practo.com/
+06-07-2026 16:01:23 [main] INFO  TC_01_LocationAndService - Initializing Chrome Driver
+06-07-2026 16:01:31 [main] INFO  TC_01_LocationAndService - Launching URL: https://www.practo.com/
+06-07-2026 16:01:38 [main] INFO  TC_01_LocationAndService - Browser maximized successfully
+06-07-2026 16:01:38 [main] INFO  TC_01_LocationAndService - Driver setup completed
+06-07-2026 16:01:38 [main] INFO  TC_01_LocationAndService - Starting :TC_01_LocationAndService
+06-07-2026 16:01:38 [main] INFO  TC_01_LocationAndService - Starting Location and Service validation
+06-07-2026 16:01:38 [main] INFO  TC_01_LocationAndService - Verifying website URL
+06-07-2026 16:01:38 [main] INFO  TC_01_LocationAndService - Website URL verified successfully
+06-07-2026 16:01:38 [main] INFO  TC_01_LocationAndService - Selecting city: mumbai
+06-07-2026 16:01:49 [main] INFO  TC_01_LocationAndService - Selecting service: hospital
+06-07-2026 16:01:58 [main] INFO  TC_01_LocationAndService - Verifying search results page
+06-07-2026 16:01:58 [main] INFO  TC_01_LocationAndService - Location and Service validation completed successfully
+06-07-2026 16:01:58 [main] INFO  TC_01_LocationAndService - Ending :TC_01_LocationAndService
+06-07-2026 16:01:58 [main] INFO  TC_01_LocationAndService - Closing browser
+06-07-2026 16:02:03 [main] INFO  TC_01_LocationAndService - Browser closed successfully
+06-07-2026 16:02:03 [main] INFO  TC_02_HospitalCount - Initializing Chrome Driver
+06-07-2026 16:02:09 [main] INFO  TC_02_HospitalCount - Launching URL: https://www.practo.com/
+06-07-2026 16:02:16 [main] INFO  TC_02_HospitalCount - Browser maximized successfully
+06-07-2026 16:02:16 [main] INFO  TC_02_HospitalCount - Driver setup completed
+06-07-2026 16:02:16 [main] INFO  TC_02_HospitalCount - Starting :TC_02_HospitalCount
+06-07-2026 16:02:16 [main] INFO  TC_02_HospitalCount - Verifying hospital count availability
+06-07-2026 16:02:43 [main] INFO  TC_02_HospitalCount - Hospital count element is displayed
+06-07-2026 16:02:43 [main] INFO  TC_02_HospitalCount - Retrieved hospital count: 1165
+06-07-2026 16:02:43 [main] INFO  TC_02_HospitalCount - Hospital count validation completed successfully
+06-07-2026 16:02:43 [main] INFO  TC_02_HospitalCount - Ending :TC_02_HospitalCount
+06-07-2026 16:02:43 [main] INFO  TC_02_HospitalCount - Closing browser
+06-07-2026 16:02:49 [main] INFO  TC_02_HospitalCount - Browser closed successfully
+06-07-2026 16:02:49 [main] INFO  TC_03_Open24x7Hospitals - Initializing Chrome Driver
+06-07-2026 16:02:55 [main] INFO  TC_03_Open24x7Hospitals - Launching URL: https://www.practo.com/
+06-07-2026 16:02:59 [main] INFO  TC_03_Open24x7Hospitals - Browser maximized successfully
+06-07-2026 16:02:59 [main] INFO  TC_03_Open24x7Hospitals - Driver setup completed
+06-07-2026 16:02:59 [main] INFO  TC_03_Open24x7Hospitals - Starting :TC_03_Open24x7Hospitals
+06-07-2026 16:02:59 [main] INFO  TC_03_Open24x7Hospitals - Retrieving hospitals operating 24x7
+06-07-2026 16:03:22 [main] INFO  TC_03_Open24x7Hospitals - Found 10 hospitals operating 24x7
+06-07-2026 16:03:22 [main] INFO  TC_03_Open24x7Hospitals - 24x7 hospitals validation completed successfully
+06-07-2026 16:03:22 [main] INFO  TC_03_Open24x7Hospitals - Hospitals operating 24x7: [Dr L H Hiranandani Hospital, Wockhardt Hospitals (formerly known as Umrao Hospital), Cloudnine Hospital, Criticare Asia Multispeciality Hospital & Research Centre, Phoenix Hospital, Parel Hospital, Nanavati Max Super Speciality Hospital, Marvel Multispeciality Hospital, Greenview Medical Center, Vasan Eye Care]
+06-07-2026 16:03:22 [main] INFO  TC_03_Open24x7Hospitals - Ending :TC_03_Open24x7Hospitals
+06-07-2026 16:03:22 [main] INFO  TC_03_Open24x7Hospitals - Closing browser
+06-07-2026 16:03:28 [main] INFO  TC_03_Open24x7Hospitals - Browser closed successfully
+06-07-2026 16:03:28 [main] INFO  TC_04_HighRatedHospitals - Initializing Chrome Driver
+06-07-2026 16:03:34 [main] INFO  TC_04_HighRatedHospitals - Launching URL: https://www.practo.com/
+06-07-2026 16:03:40 [main] INFO  TC_04_HighRatedHospitals - Browser maximized successfully
+06-07-2026 16:03:40 [main] INFO  TC_04_HighRatedHospitals - Driver setup completed
+06-07-2026 16:03:40 [main] INFO  TC_04_HighRatedHospitals - Starting :TC_04_HighRatedHospitals
+06-07-2026 16:03:40 [main] INFO  TC_04_HighRatedHospitals - Retrieving hospitals with rating greater than 3.5
+06-07-2026 16:04:11 [main] WARN  SearchResultPage - Skipping (no rating shown): Parel Hospital
+06-07-2026 16:04:23 [main] WARN  SearchResultPage - Skipping (no rating shown): Parel Hospital
+06-07-2026 16:04:34 [main] WARN  SearchResultPage - Skipping (no rating shown): Parel Hospital
+06-07-2026 16:04:34 [main] INFO  TC_04_HighRatedHospitals - Found 10 hospitals with rating greater than 3.5
+06-07-2026 16:04:34 [main] INFO  TC_04_HighRatedHospitals - High-rated hospitals validation completed successfully
+06-07-2026 16:04:34 [main] INFO  TC_04_HighRatedHospitals - Hospitals with rating greater than 3.5: [Dr L H Hiranandani Hospital, Wockhardt Hospitals (formerly known as Umrao Hospital), Cloudnine Hospital, Parchure Nursing Home, Dr. Jonwal's NapAyurVeda Panchkarm & Wellness, Criticare Asia Multispeciality Hospital & Research Centre, Phoenix Hospital, Adarsh Hospital, Nanavati Max Super Speciality Hospital, Devi-Eye-Hospitals.]
+06-07-2026 16:04:34 [main] INFO  TC_04_HighRatedHospitals - Ending :TC_04_HighRatedHospitals
+06-07-2026 16:04:34 [main] INFO  TC_04_HighRatedHospitals - Closing browser
+06-07-2026 16:04:40 [main] INFO  TC_04_HighRatedHospitals - Browser closed successfully
+06-07-2026 16:04:40 [main] INFO  TC_05_BookVisitButton - Initializing Chrome Driver
+06-07-2026 16:04:46 [main] INFO  TC_05_BookVisitButton - Launching URL: https://www.practo.com/
+06-07-2026 16:04:52 [main] INFO  TC_05_BookVisitButton - Browser maximized successfully
+06-07-2026 16:04:52 [main] INFO  TC_05_BookVisitButton - Driver setup completed
+06-07-2026 16:04:52 [main] INFO  TC_05_BookVisitButton - Starting :TC_05_BookVisitButton
+06-07-2026 16:04:52 [main] INFO  TC_05_BookVisitButton - Verifying Book Visit button clickability
+06-07-2026 16:05:31 [main] WARN  SearchResultPage - Skipping (no book button): Parel Hospital
+06-07-2026 16:05:43 [main] WARN  SearchResultPage - Skipping (no book button): Parel Hospital
+06-07-2026 16:05:54 [main] WARN  SearchResultPage - Skipping (no book button): Parel Hospital
+06-07-2026 16:05:54 [main] INFO  TC_05_BookVisitButton - All Book Visit buttons are clickable
+06-07-2026 16:05:54 [main] INFO  TC_05_BookVisitButton - Button clickability validation completed successfully
+06-07-2026 16:05:54 [main] INFO  TC_05_BookVisitButton - Ending :TC_05_BookVisitButton
+06-07-2026 16:05:54 [main] INFO  TC_05_BookVisitButton - Closing browser
+06-07-2026 16:06:00 [main] INFO  TC_05_BookVisitButton - Browser closed successfully
+06-07-2026 16:43:05 [main] INFO  TC_01_LocationAndService - Initializing Chrome Driver
+06-07-2026 16:43:12 [main] INFO  TC_01_LocationAndService - Launching URL: https://www.practo.com/
+06-07-2026 16:43:21 [main] INFO  TC_01_LocationAndService - Browser maximized successfully
+06-07-2026 16:43:21 [main] INFO  TC_01_LocationAndService - Driver setup completed
+06-07-2026 16:43:21 [main] INFO  TC_01_LocationAndService - Starting : TC_01_LocationAndService
+06-07-2026 16:43:21 [main] INFO  TC_01_LocationAndService - Starting Location and Service validation
+06-07-2026 16:43:21 [main] INFO  TC_01_LocationAndService - Verifying website URL
+06-07-2026 16:43:21 [main] INFO  TC_01_LocationAndService - Website URL verified successfully
+06-07-2026 16:43:21 [main] INFO  TC_01_LocationAndService - Selecting city: mumbai
+06-07-2026 16:43:32 [main] INFO  TC_01_LocationAndService - Selecting service: hospital
+06-07-2026 16:43:45 [main] INFO  TC_01_LocationAndService - Verifying search results page
+06-07-2026 16:43:45 [main] INFO  TC_01_LocationAndService - Location and Service validation completed successfully
+06-07-2026 16:43:45 [main] INFO  TC_01_LocationAndService - Ending : TC_01_LocationAndService
+06-07-2026 16:43:45 [main] INFO  TC_01_LocationAndService - Closing browser
+06-07-2026 16:43:51 [main] INFO  TC_01_LocationAndService - Browser closed successfully
+06-07-2026 16:43:51 [main] INFO  TC_02_HospitalCount - Initializing Chrome Driver
+06-07-2026 16:43:56 [main] INFO  TC_02_HospitalCount - Launching URL: https://www.practo.com/
+06-07-2026 16:44:02 [main] INFO  TC_02_HospitalCount - Browser maximized successfully
+06-07-2026 16:44:02 [main] INFO  TC_02_HospitalCount - Driver setup completed
+06-07-2026 16:44:02 [main] INFO  TC_02_HospitalCount - Starting : TC_02_HospitalCount
+06-07-2026 16:44:02 [main] INFO  TC_02_HospitalCount - Verifying hospital count availability
+06-07-2026 16:44:02 [main] INFO  TC_02_HospitalCount - Selecting city: mumbai
+06-07-2026 16:44:13 [main] INFO  TC_02_HospitalCount - Selecting service: hospital
+06-07-2026 16:44:23 [main] INFO  TC_02_HospitalCount - Hospital count element is displayed
+06-07-2026 16:44:23 [main] INFO  TC_02_HospitalCount - Retrieved hospital count: 1165
+06-07-2026 16:44:23 [main] INFO  TC_02_HospitalCount - Hospital count validation completed successfully
+06-07-2026 16:44:23 [main] INFO  TC_02_HospitalCount - Ending : TC_02_HospitalCount
+06-07-2026 16:44:23 [main] INFO  TC_02_HospitalCount - Closing browser
+06-07-2026 16:44:29 [main] INFO  TC_02_HospitalCount - Browser closed successfully
+06-07-2026 16:44:29 [main] INFO  TC_03_Open24x7Hospitals - Initializing Chrome Driver
+06-07-2026 16:44:35 [main] INFO  TC_03_Open24x7Hospitals - Launching URL: https://www.practo.com/
+06-07-2026 16:44:43 [main] INFO  TC_03_Open24x7Hospitals - Browser maximized successfully
+06-07-2026 16:44:43 [main] INFO  TC_03_Open24x7Hospitals - Driver setup completed
+06-07-2026 16:44:43 [main] INFO  TC_03_Open24x7Hospitals - Starting : TC_03_Open24x7Hospitals
+06-07-2026 16:44:43 [main] INFO  TC_03_Open24x7Hospitals - Retrieving hospitals operating 24x7
+06-07-2026 16:44:43 [main] INFO  TC_03_Open24x7Hospitals - Selecting city: mumbai
+06-07-2026 16:44:54 [main] INFO  TC_03_Open24x7Hospitals - Selecting service: hospital
+06-07-2026 16:45:10 [main] INFO  TC_03_Open24x7Hospitals - Found 10 hospitals operating 24x7
+06-07-2026 16:45:10 [main] INFO  TC_03_Open24x7Hospitals - 24x7 hospitals validation completed successfully
+06-07-2026 16:45:10 [main] INFO  TC_03_Open24x7Hospitals - Hospitals operating 24x7: [Dr L H Hiranandani Hospital, Wockhardt Hospitals (formerly known as Umrao Hospital), Cloudnine Hospital, Criticare Asia Multispeciality Hospital & Research Centre, Phoenix Hospital, Parel Hospital, Nanavati Max Super Speciality Hospital, Marvel Multispeciality Hospital, Greenview Medical Center, Vasan Eye Care]
+06-07-2026 16:45:10 [main] INFO  TC_03_Open24x7Hospitals - Ending : TC_03_Open24x7Hospitals
+06-07-2026 16:45:10 [main] INFO  TC_03_Open24x7Hospitals - Closing browser
+06-07-2026 16:45:16 [main] INFO  TC_03_Open24x7Hospitals - Browser closed successfully
+06-07-2026 16:45:16 [main] INFO  TC_04_HighRatedHospitals - Initializing Chrome Driver
+06-07-2026 16:45:22 [main] INFO  TC_04_HighRatedHospitals - Launching URL: https://www.practo.com/
+06-07-2026 16:45:29 [main] INFO  TC_04_HighRatedHospitals - Browser maximized successfully
+06-07-2026 16:45:29 [main] INFO  TC_04_HighRatedHospitals - Driver setup completed
+06-07-2026 16:45:29 [main] INFO  TC_04_HighRatedHospitals - Starting : TC_04_HighRatedHospitals
+06-07-2026 16:45:29 [main] INFO  TC_04_HighRatedHospitals - Retrieving hospitals with rating greater than 3.5
+06-07-2026 16:45:29 [main] INFO  TC_04_HighRatedHospitals - Selecting city: mumbai
+06-07-2026 16:45:40 [main] INFO  TC_04_HighRatedHospitals - Selecting service: hospital
+06-07-2026 16:46:07 [main] WARN  SearchResultPage - Skipping (no rating shown): Parel Hospital
+06-07-2026 16:46:18 [main] WARN  SearchResultPage - Skipping (no rating shown): Parel Hospital
+06-07-2026 16:46:29 [main] WARN  SearchResultPage - Skipping (no rating shown): Parel Hospital
+06-07-2026 16:46:30 [main] INFO  TC_04_HighRatedHospitals - Found 10 hospitals with rating greater than 3.5
+06-07-2026 16:46:30 [main] INFO  TC_04_HighRatedHospitals - High-rated hospitals validation completed successfully
+06-07-2026 16:46:30 [main] INFO  TC_04_HighRatedHospitals - Hospitals with rating greater than 3.5: [Dr L H Hiranandani Hospital, Wockhardt Hospitals (formerly known as Umrao Hospital), Cloudnine Hospital, Parchure Nursing Home, Dr. Jonwal's NapAyurVeda Panchkarm & Wellness, Criticare Asia Multispeciality Hospital & Research Centre, Phoenix Hospital, Adarsh Hospital, Nanavati Max Super Speciality Hospital, Devi-Eye-Hospitals.]
+06-07-2026 16:46:30 [main] INFO  TC_04_HighRatedHospitals - Ending : TC_04_HighRatedHospitals
+06-07-2026 16:46:30 [main] INFO  TC_04_HighRatedHospitals - Closing browser
+06-07-2026 16:46:34 [main] INFO  TC_04_HighRatedHospitals - Browser closed successfully
+06-07-2026 16:46:34 [main] INFO  TC_05_BookVisitButton - Initializing Chrome Driver
+06-07-2026 16:46:40 [main] INFO  TC_05_BookVisitButton - Launching URL: https://www.practo.com/
+06-07-2026 16:46:46 [main] INFO  TC_05_BookVisitButton - Browser maximized successfully
+06-07-2026 16:46:46 [main] INFO  TC_05_BookVisitButton - Driver setup completed
+06-07-2026 16:46:46 [main] INFO  TC_05_BookVisitButton - Starting : TC_05_BookVisitButton
+06-07-2026 16:46:46 [main] INFO  TC_05_BookVisitButton - Verifying Book Visit button clickability
+06-07-2026 16:46:46 [main] INFO  TC_05_BookVisitButton - Selecting city: mumbai
+06-07-2026 16:46:57 [main] INFO  TC_05_BookVisitButton - Selecting service: hospital
+06-07-2026 16:47:18 [main] WARN  SearchResultPage - Skipping (no book button): Parel Hospital
+06-07-2026 16:47:29 [main] WARN  SearchResultPage - Skipping (no book button): Parel Hospital
+06-07-2026 16:47:39 [main] WARN  SearchResultPage - Skipping (no book button): Parel Hospital
+06-07-2026 16:47:39 [main] INFO  TC_05_BookVisitButton - All Book Visit buttons are clickable
+06-07-2026 16:47:39 [main] INFO  TC_05_BookVisitButton - Button clickability validation completed successfully
+06-07-2026 16:47:39 [main] INFO  TC_05_BookVisitButton - Ending : TC_05_BookVisitButton
+06-07-2026 16:47:39 [main] INFO  TC_05_BookVisitButton - Closing browser
+06-07-2026 16:47:43 [main] INFO  TC_05_BookVisitButton - Browser closed successfully

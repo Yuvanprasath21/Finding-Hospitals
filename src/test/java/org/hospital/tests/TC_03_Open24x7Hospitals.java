@@ -1,16 +1,22 @@
 package org.hospital.tests;
 
 import basetest.BaseTest;
+import org.hospital.pages.HomePage;
 import org.hospital.pages.SearchResultPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utilities.ConfigReader;
 
 import java.util.Set;
 
 @Test
 public class TC_03_Open24x7Hospitals extends BaseTest {
     public void verify_timing(){
+        logger.info("Starting : " + this.getClass().getSimpleName());
         logger.info("Retrieving hospitals operating 24x7");
+
+        navigateToSearchResults();
+
         SearchResultPage searchResultPage=new SearchResultPage(driver);
         Set<String> hospitals = searchResultPage.get24x7Hospitals();
         Assert.assertFalse(
@@ -24,5 +30,6 @@ public class TC_03_Open24x7Hospitals extends BaseTest {
         );
         logger.info("24x7 hospitals validation completed successfully");
         logger.info("Hospitals operating 24x7: {}", hospitals);
+        logger.info("Ending : " + this.getClass().getSimpleName());
     }
 }

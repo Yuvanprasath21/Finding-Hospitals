@@ -1,16 +1,23 @@
 package org.hospital.tests;
 
 import basetest.BaseTest;
+import org.hospital.pages.HomePage;
 import org.hospital.pages.SearchResultPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utilities.ConfigReader;
 
 import java.util.Set;
 
 @Test
 public class TC_04_HighRatedHospitals extends BaseTest {
     public void verify_rating() {
+        logger.info("Starting : " + this.getClass().getSimpleName());
         logger.info("Retrieving hospitals with rating greater than 3.5");
+
+        navigateToSearchResults();
+
+
         SearchResultPage searchResultPage = new SearchResultPage(driver);
         Set<String> hospitals = searchResultPage.getHighRatingHospitals();
         Assert.assertFalse(
@@ -24,5 +31,6 @@ public class TC_04_HighRatedHospitals extends BaseTest {
         );
         logger.info("High-rated hospitals validation completed successfully");
         logger.info("Hospitals with rating greater than 3.5: {}", hospitals);
+        logger.info("Ending : " + this.getClass().getSimpleName());
     }
 }
