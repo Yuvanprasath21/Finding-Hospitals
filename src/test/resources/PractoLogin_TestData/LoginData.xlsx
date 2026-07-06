@@ -1,0 +1,16 @@
+package PractoLogin_TestData;
+
+public class PractoLogin_TestData {
+
+    // Excel Sheet Name
+    public static final String SHEET_NAME = "LoginData";
+
+    // Row Numbers
+    public static final int VALID_LOGIN = 1;
+
+    public static final int WRONG_PASSWORD = 2;
+
+    public static final int INVALID_USERNAME = 3;
+
+    public static final int INVALID_PASSWORD = 4;
+}

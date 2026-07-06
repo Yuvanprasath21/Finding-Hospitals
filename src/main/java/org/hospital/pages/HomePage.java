@@ -23,6 +23,8 @@ public class HomePage extends CommonCode{
     @FindBy(xpath = "//div[@data-qa-id='omni-suggestion-main'][contains(.,'Bangalore')]")
     WebElement suggestionValueOfBangalore;
 
+
+
     public void findAndClickBanagalore() {
         location.click();
         location.sendKeys(Keys.CONTROL + "a");
@@ -38,6 +40,10 @@ public class HomePage extends CommonCode{
     public void findAndClickHospital(){
         searchBox.sendKeys("Hospital");
         wait.until(ExpectedConditions.elementToBeClickable(suggestionValueOfHospital)).click();
+    }
+
+    public void clickLogin(){
+
     }
 
 }

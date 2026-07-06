@@ -1,11 +1,18 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.1.dtd">
 <suite name="Suite">
+
     <listeners>
 <!--        <listener class-name="utilities.ExtentReportManager"/>-->
     </listeners>
     <test name="Test">
         <classes>
-            <class name="org.hospital.tests.TC_01_BangaloreHospitals"/>
-<!--            <class name="org.hospital.tests.TC_02_HospitalCount"/>-->
+            <class name="org.hospital.tests.TC_16_LoginPage"/>
+            <class name="org.hospital.tests.TC_17_ValidLoginCredential"/>
+            <class name="org.hospital.tests.TC_18_WrongPasswordCredential"/>
+            <class name="org.hospital.tests.TC_19_InvalidCredential"/>
+            <class name="org.hospital.tests.TC_20_WrongCredential"/>
+
+    <!--            <class name="org.hospital.tests.TC_02_HospitalCount"/>-->
 <!--            <class name="org.hospital.tests.TC_03_Open24x7Hospitals"/>-->
 <!--            <class name="org.hospital.tests.TC_04_HighRatedHospitals"/>-->
 <!--            <class name="org.hospital.tests.TC_05_BookVisitButton"/>-->
