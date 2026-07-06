@@ -1,6 +1,7 @@
 package org.hospital.tests;
 
 import basetest.BaseTest;
+import org.hospital.pages.HomePage;
 import org.hospital.pages.ParkingFacilityPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -11,6 +12,10 @@ public class TC_09_PhoneNumbers extends BaseTest {
 
     @Test
     public void capturePhoneNumbers() {
+        HomePage hp = new HomePage(driver);
+        hp.findAndClickCity("Bangalore");
+        hp.findAndClickService("Hospital");
+
         ParkingFacilityPage page = new ParkingFacilityPage(driver);
         page.callButton(); // reveal numbers first
         List<String> phones = page.getPhoneNumbers();
