@@ -33,16 +33,11 @@ public class TC_13_AddFirstTestToCart extends BaseTest {
         slowWait.until(ExpectedConditions.visibilityOf(
                 diagnostics.getFirstTestCardElement()
         ));
-        softAssert.assertTrue(
-                diagnostics.getFirstTestCardElement().isDisplayed(),
-                "First test card is not visible"
-        );
+        softAssert.assertTrue(diagnostics.getFirstTestCardElement().isDisplayed(), "First test card is not visible");
 
         diagnostics.clickFirstTestCard();
         slowWait.until(ExpectedConditions.urlContains("thyroid"));
-        softAssert.assertTrue(
-                driver.getCurrentUrl().contains("thyroid"),
-                "User is not navigated to the test details page"
+        softAssert.assertTrue(driver.getCurrentUrl().contains("thyroid"), "User is not navigated to the test details page"
         );
 
         System.out.println("Test details page opened.");
@@ -51,10 +46,7 @@ public class TC_13_AddFirstTestToCart extends BaseTest {
         ));
 
         diagnostics.clickAddToCart();
-        softAssert.assertTrue(
-                driver.getCurrentUrl().contains("thyroid"),
-                "User left the test details page unexpectedly"
-        );
+        softAssert.assertTrue(driver.getCurrentUrl().contains("thyroid"), "User left the test details page unexpectedly");
         System.out.println("First test added to cart successfully.\n");
         softAssert.assertAll();
     }

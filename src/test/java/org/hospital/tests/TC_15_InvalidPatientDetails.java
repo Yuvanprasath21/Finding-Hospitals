@@ -44,6 +44,6 @@ public class TC_15_InvalidPatientDetails extends BaseTest {
 
         Assert.assertEquals(phoneError, "Invalid Phone Number");
         Assert.assertEquals(emailError, "Enter valid email");
-        driver.get(properties.getProperty("website_url"));
+
     }
 }

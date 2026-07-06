@@ -51,10 +51,7 @@ public class TC_14_AddSecondTestToCart extends BaseTest {
         //Add to Cart
         diagnostics.clickAddToCart();
         System.out.println("Second test added to cart successfully.\n");
-        softAssert.assertFalse(
-                driver.getCurrentUrl().contains("cart"),
-                "User was redirected to cart page"
-        );
+        softAssert.assertFalse(driver.getCurrentUrl().contains("cart"), "User was redirected to cart page");
         softAssert.assertAll();
     }
 }

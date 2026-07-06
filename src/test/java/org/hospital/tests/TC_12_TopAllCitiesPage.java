@@ -17,15 +17,9 @@ public class TC_12_TopAllCitiesPage extends BaseTest {
         diagnostics.clickDiagnostics();
         List<String> topCities = diagnostics.getTopCities();
         List<String> allCities = diagnostics.getAllCities();
-        Assert.assertFalse(
-                topCities.isEmpty(),
-                "Top Cities could not be extracted"
-        );
 
-        Assert.assertFalse(
-                allCities.isEmpty(),
-                "All Cities could not be extracted"
-        );
+        Assert.assertFalse(topCities.isEmpty(), "Top Cities could not be extracted");
+        Assert.assertFalse(allCities.isEmpty(), "All Cities could not be extracted");
 
         // Print extracted cities
         System.out.println("\nTOP CITIES:");

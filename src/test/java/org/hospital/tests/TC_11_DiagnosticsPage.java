@@ -15,20 +15,14 @@ public class TC_11_DiagnosticsPage extends BaseTest {
         diagnostics.clickDiagnostics();
 
         String currentUrl = driver.getCurrentUrl();
-        Assert.assertTrue(
-                currentUrl.contains("tests"),
-                "User did NOT navigate to Diagnostics page"
-        );
+        Assert.assertTrue(currentUrl.contains("tests"), "User did NOT navigate to Diagnostics page");
         System.out.println("User successfully navigated to Diagnostics page");
         System.out.println("Heading 1 : " + diagnostics.getTopCitiesHeading());
         System.out.println("Heading 2 : " + diagnostics.getAllCitiesHeading());
         driver.get(properties.getProperty("website_url"));
 
         diagnostics.clickFindDoctorsNearYou();
-        Assert.assertTrue(
-                driver.getCurrentUrl().contains("doctors"),
-                "User did NOT navigate to Find Doctors page"
-        );
+        Assert.assertTrue(driver.getCurrentUrl().contains("doctors"), "User did NOT navigate to Find Doctors page");
         System.out.println("\nUser successfully navigated to Find Doctors page");
 
         List<String> searches = diagnostics.getPopularSearches();
