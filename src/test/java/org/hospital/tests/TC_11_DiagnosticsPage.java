@@ -17,7 +17,7 @@ public class TC_11_DiagnosticsPage extends BaseTest {
         String currentUrl = driver.getCurrentUrl();
         Assert.assertTrue(currentUrl.contains("tests"), "User did NOT navigate to Diagnostics page");
         System.out.println("User successfully navigated to Diagnostics page");
-        System.out.println("Heading 1 : " + diagnostics.getTopCitiesHeading());
+        System.out.println("Heading 1 : " + diagnostics.getTopCitgiesHeading());
         System.out.println("Heading 2 : " + diagnostics.getAllCitiesHeading());
         driver.get(properties.getProperty("website_url"));
 
