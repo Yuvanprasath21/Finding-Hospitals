@@ -8,8 +8,8 @@ import org.testng.annotations.Test;
 public class TC_01_BangaloreHospitals extends BaseTest {
     public void getHospitals() {
         HomePage homePage =new HomePage(driver);
-
         homePage.findAndClickBanagalore();
         homePage.findAndClickHospital();
+        driver.get(properties.getProperty("website_url"));
     }
 }

@@ -5,6 +5,12 @@
     <test name="Test">
         <classes>
             <class name="org.hospital.tests.TC_01_BangaloreHospitals"/>
+            <class name="org.hospital.tests.TC_11_DiagnosticsPage"/>
+            <class name="org.hospital.tests.TC_12_TopAllCitiesPage"/>
+            <class name="org.hospital.tests.TC_13_AddFirstTestToCart"/>
+            <class name="org.hospital.tests.TC_14_AddSecondTestToCart"/>
+            <class name="org.hospital.tests.TC_15_InvalidPatientDetails"/>
+
 <!--            <class name="org.hospital.tests.TC_02_HospitalCount"/>-->
 <!--            <class name="org.hospital.tests.TC_03_Open24x7Hospitals"/>-->
 <!--            <class name="org.hospital.tests.TC_04_HighRatedHospitals"/>-->

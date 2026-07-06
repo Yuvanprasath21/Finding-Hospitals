@@ -17,7 +17,13 @@ public class CommonCode {
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         js=(JavascriptExecutor) driver;
     }
-
+    public void slowScrollToElement(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript(
+                "arguments[0].scrollIntoView({behavior:'smooth', block:'center'});",
+                element
+        );
+    }
     public void scrollIntoView(WebElement element) {
         js.executeScript("arguments[0].scrollIntoView(true);", element);
     }
