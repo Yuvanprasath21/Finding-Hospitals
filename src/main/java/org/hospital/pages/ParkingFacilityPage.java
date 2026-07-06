@@ -177,27 +177,34 @@ public class ParkingFacilityPage extends BasePage {
             return false;
         }
 
-        // 🔑 Scroll until page height stops growing — using FluentWait, no Thread.sleep
+        // 🔑 Scroll until doctor card count stops growing
         FluentWait<WebDriver> fluentWait = new FluentWait<>(driver)
-                .withTimeout(Duration.ofSeconds(30))
-                .pollingEvery(Duration.ofMillis(800))
+                .withTimeout(Duration.ofSeconds(120))         // 🔑 Increased to 2 min
+                .pollingEvery(Duration.ofMillis(1500))        // 🔑 Slower polling for lazy load
                 .ignoring(Exception.class);
 
-        long[] lastHeight = {0};
+        int[] lastCardCount = {0};
         int[] stable = {0};
 
         try {
             fluentWait.until(d -> {
+                // Scroll to bottom
                 js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
-                long newHeight = ((Number) js.executeScript(
-                        "return document.body.scrollHeight")).longValue();
-                if (newHeight == lastHeight[0]) {
+
+                // Count current cards
+                int currentCards = d.findElements(By.className("listing-doctor-card")).size();
+
+                if (currentCards == lastCardCount[0]) {
                     stable[0]++;
                 } else {
                     stable[0] = 0;
-                    lastHeight[0] = newHeight;
+                    lastCardCount[0] = currentCards;
                 }
-                return stable[0] >= 3;   // 3 polls same height → fully loaded
+
+                System.out.println("Loaded cards: " + currentCards + " (stable=" + stable[0] + ")");
+
+                // 🔑 Stop when: card count stable for 4 polls AND at least matches expected
+                return stable[0] >= 4 && currentCards >= expectedCount - 5;
             });
         } catch (Exception e) {
             System.out.println("Scroll wait ended: " + e.getMessage());
@@ -207,7 +214,6 @@ public class ParkingFacilityPage extends BasePage {
         int actualCount = cards.size();
         System.out.println("Expected: " + expectedCount + " | Actual: " + actualCount);
 
-        // 🔑 Tolerance increased to 5 — allows realistic variance in Practo counts
         int tolerance = 5;
         return Math.abs(actualCount - expectedCount) <= tolerance;
     }

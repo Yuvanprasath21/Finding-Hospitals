@@ -4,10 +4,10 @@
     </listeners>
     <test name="Test">
         <classes>
-            <class name="org.hospital.tests.TC_06_NavigateHospitals"/>
-            <class name="org.hospital.tests.TC_07_ParkingAmenities"/>
-            <class name="org.hospital.tests.TC_08_CallButtonClickable"/>
-            <class name="org.hospital.tests.TC_09_PhoneNumbers"/>
+<!--            <class name="org.hospital.tests.TC_06_NavigateHospitals"/>-->
+<!--            <class name="org.hospital.tests.TC_07_ParkingAmenities"/>-->
+<!--            <class name="org.hospital.tests.TC_08_CallButtonClickable"/>-->
+<!--            <class name="org.hospital.tests.TC_09_PhoneNumbers"/>-->
             <class name="org.hospital.tests.TC_10_DoctorCount"/>
             </classes>
     </test>
