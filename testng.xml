@@ -9,7 +9,11 @@
             <class name="org.hospital.tests.TC_03_Open24x7Hospitals"/>
             <class name="org.hospital.tests.TC_04_HighRatedHospitals"/>
             <class name="org.hospital.tests.TC_05_BookVisitButton"/>
-
+            <class name="org.hospital.tests.TC_06_NavigateHospitals"/>
+            <class name="org.hospital.tests.TC_07_ParkingAmenities"/>
+            <class name="org.hospital.tests.TC_08_CallButtonClickable"/>
+            <class name="org.hospital.tests.TC_09_PhoneNumbers"/>
+            <class name="org.hospital.tests.TC_10_DoctorCount"/>
         </classes>
     </test>
 </suite>

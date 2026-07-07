@@ -10,7 +10,7 @@ import utilities.ConfigReader;
 @Test
 public class TC_01_LocationAndService extends BaseTest {
     public void getHospitals() {
-        logger.info("Starting : " + this.getClass().getSimpleName());
+        logger.info("Starting : {}", this.getClass().getSimpleName());
         logger.info("Starting Location and Service validation");
 
         String websiteUrl = ConfigReader.getProperty("website_url");
@@ -38,6 +38,6 @@ public class TC_01_LocationAndService extends BaseTest {
                 ,"Page is not loaded correctly for location and service"
         );
         logger.info("Location and Service validation completed successfully");
-        logger.info("Ending : " + this.getClass().getSimpleName());
+        logger.info("Ending : {}", this.getClass().getSimpleName());
     }
 }

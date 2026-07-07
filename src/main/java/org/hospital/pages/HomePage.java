@@ -30,14 +30,14 @@ public class HomePage extends BasePage {
         locationSearchBox.sendKeys(Keys.DELETE);
         locationSearchBox.sendKeys(city);
         try{
-            WebElement citySuggestion = wait.until(
-                    ExpectedConditions.elementToBeClickable(
-                            By.xpath("//div[@data-qa-id='omni-suggestion-city']/span/div[contains(.,'" + city + "')]")));
+            WebElement citySuggestion = wait.until(ExpectedConditions
+                    .elementToBeClickable(searchInEntireCity));
             citySuggestion.click();
         }
         catch (Exception e) {
-            WebElement citySuggestion = wait.until(ExpectedConditions
-                                            .elementToBeClickable(searchInEntireCity));
+            WebElement citySuggestion = wait.until(
+                    ExpectedConditions.elementToBeClickable(
+                            By.xpath("//div[@data-qa-id='omni-suggestion-city']/span/div[contains(.,'" + city + "')]")));
             citySuggestion.click();
         }
     }

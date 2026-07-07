@@ -23,11 +23,11 @@ public class BaseTest {
     public void setDriver() {
         logger.info("Initializing Chrome Driver");
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         String url = ConfigReader.getProperty("website_url");
         logger.info("Launching URL: {}", url);
         driver.get(url);
-        driver.manage().window().maximize();
         logger.info("Browser maximized successfully");
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         logger.info("Driver setup completed");
