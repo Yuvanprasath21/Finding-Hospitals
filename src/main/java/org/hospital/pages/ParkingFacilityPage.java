@@ -67,15 +67,15 @@ public class ParkingFacilityPage extends BasePage {
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(READ_MORE_INFO))).click();
                 List<WebElement> parking = driver.findElements(By.xpath(PARKING_AMENITY));
                 if (!parking.isEmpty() && parking.get(0).isDisplayed()) {
-                    logger.info("{} -> Parking Available", hospitalTitle);
+                    logger.info("Parking Available -> {} ", hospitalTitle);
                     hospitalsWithParking++;
                 }
                 else {
-                    logger.info("{} -> Parking NOT available", hospitalTitle);
+                    logger.info("Parking NOT available -> {} ", hospitalTitle);
                 }
             }
             catch (Exception e) {
-                logger.warn("{} -> Skipped ({})", hospitalTitle, e.getClass().getSimpleName());
+                logger.warn("Skipped  -> {} : ({})", hospitalTitle, e.getClass().getSimpleName());
             }
             finally {
                 driver.close();

@@ -14,6 +14,16 @@
             <class name="org.hospital.tests.TC_08_CallButtonClickable"/>
             <class name="org.hospital.tests.TC_09_PhoneNumbers"/>
             <class name="org.hospital.tests.TC_10_DoctorCount"/>
+            <class name="org.hospital.tests.TC_11_DoctorsNearYou"/>
+            <class name="org.hospital.tests.TC_12_TopAllCitiesPage"/>
+            <class name="org.hospital.tests.TC_13_AddFirstTestToCart"/>
+            <class name="org.hospital.tests.TC_14_AddSecondTestToCart"/>
+            <class name="org.hospital.tests.TC_15_InvalidPatientDetails"/>
+<!--            <class name="org.hospital.tests.TC_16_ValidWellness"/>-->
+<!--            <class name="org.hospital.tests.TC_17_InvalidWellness"/>-->
+<!--            <class name="org.hospital.tests.TC_18_PainRelifTablet"/>-->
+<!--            <class name="org.hospital.tests.TC_19_HeartHealthTablet"/>-->
+<!--            <class name="org.hospital.tests.TC_20_DoctorCount"/>-->
         </classes>
     </test>
 </suite>

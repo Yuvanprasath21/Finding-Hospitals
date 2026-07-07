@@ -64,8 +64,7 @@ public class SearchResultPage extends BasePage {
                     logger.warn("Skipping hospital: {}", e.getMessage());
                 }
             }
-            WebElement lastHospital = hospitals.getLast();
-            scrollIntoCenterView(lastHospital);
+            scrollToLastHospital();
             scrollCount++;
         }
         return hospitalNames;
@@ -107,8 +106,7 @@ public class SearchResultPage extends BasePage {
                             e.getClass().getSimpleName());
                 }
             }
-            WebElement lastHospital = hospitals.getLast();
-            scrollIntoCenterView(lastHospital);
+            scrollToLastHospital();
             scrollCount++;
         }
         return hospitalNames;
@@ -148,14 +146,30 @@ public class SearchResultPage extends BasePage {
                 }
                 catch (Exception e) {
                     logger.warn("Skipping (unexpected): {} : {}",
-                            name,
-                            e.getClass().getSimpleName());
+                                        name,
+                                        e.getClass().getSimpleName()
+                    );
                 }
             }
-            WebElement lastHospital = hospitals.getLast();
-            scrollIntoCenterView(lastHospital);
+            scrollToLastHospital();
             scrollCount++;
         }
         return hospitalNames.size() >= TARGET_COUNT;
     }
+
+    private void scrollToLastHospital() {
+        for (int attempt = 1; attempt <= 2; attempt++) {
+            try {
+                List<WebElement> hospitals = driver.findElements(By.xpath(HOSPITAL_LIST));
+                if (!hospitals.isEmpty()) {
+                    scrollIntoCenterView(hospitals.getLast());
+                }
+                return;
+            }
+            catch (StaleElementReferenceException e) {
+                logger.warn("Scroll attempt {} failed", attempt);
+            }
+        }
+    }
+
 }
