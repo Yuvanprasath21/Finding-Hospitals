@@ -69,6 +69,7 @@ public class DiagnosticsPage extends BasePage {
     WebElement invalidEmailMsg;
 
     public void clickDiagnostics() {
+        wait.until(ExpectedConditions.visibilityOf(diagnosticsLink));
         clickByJS(diagnosticsLink);
     }
 
@@ -77,6 +78,7 @@ public class DiagnosticsPage extends BasePage {
     }
 
     public void selectBangalore() {
+        wait.until(ExpectedConditions.visibilityOf(bangaloreCity));
         clickByJS(bangaloreCity);
     }
 
@@ -111,6 +113,7 @@ public class DiagnosticsPage extends BasePage {
     }
 
     public List<String> getTopCities() {
+        wait.until(ExpectedConditions.visibilityOfAllElements(topCities));
         List<String> cities = new ArrayList<>();
         for (WebElement city : topCities) {
             cities.add(city.getText().trim());
@@ -119,6 +122,7 @@ public class DiagnosticsPage extends BasePage {
     }
 
     public List<String> getAllCities() {
+        wait.until(ExpectedConditions.visibilityOfAllElements(allCities));
         List<String> cities = new ArrayList<>();
         for (WebElement city : allCities) {
             cities.add(city.getText().trim());
@@ -217,7 +221,6 @@ public class DiagnosticsPage extends BasePage {
     }
 
     public boolean areValidationMessagesDisplayed() {
-
         wait.until(ExpectedConditions.visibilityOf(invalidPhoneMsg));
         wait.until(ExpectedConditions.visibilityOf(invalidEmailMsg));
 

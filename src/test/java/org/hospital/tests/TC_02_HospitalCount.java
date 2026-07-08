@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 @Test
 public class TC_02_HospitalCount extends BaseTest {
-    public void verify_data() {
+    public void verifyData() {
         logger.info("Starting : {}", this.getClass().getSimpleName());
         logger.info("Verifying hospital count availability");
 

@@ -1,6 +1,6 @@
 <suite name="Suite">
     <listeners>
-<!--        <listener class-name="utilities.ExtentReportManager"/>-->
+        <listener class-name="utilities.ExtentReportManager"/>
     </listeners>
     <test name="Test">
         <classes>

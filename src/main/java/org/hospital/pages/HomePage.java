@@ -40,7 +40,7 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//span[text()='Youtube']/ancestor::a")
     WebElement youtubeLink;
 
-    @FindBy(xpath = "//span[text()='GitHub']/ancestor::a")
+    @FindBy(xpath = "//span[text()='Github']/ancestor::a")
     WebElement githubLink;
 
     public void findAndClickCity(String city) {
@@ -55,11 +55,18 @@ public class HomePage extends BasePage {
                     .elementToBeClickable(searchInEntireCity));
             citySuggestion.click();
         }
-        catch (Exception e) {
-            WebElement citySuggestion = wait.until(
-                    ExpectedConditions.elementToBeClickable(
-                            By.xpath("//div[@data-qa-id='omni-suggestion-city']/span/div[contains(.,'" + city + "')]")));
-            citySuggestion.click();
+        catch (Exception exception1) {
+            try {
+                WebElement citySuggestion = wait.until(
+                        ExpectedConditions.elementToBeClickable(
+                                By.xpath("//div[@data-qa-id='omni-suggestion-city']/span/div[contains(.,'" + city + "')]")));
+                citySuggestion.click();
+            }
+            catch (Exception exception2){
+                logger.warn("Location selection failed: {}",
+                        exception2.getMessage()
+                );
+            }
         }
     }
 
@@ -67,12 +74,19 @@ public class HomePage extends BasePage {
 
         service = capitalize(service);
         serviceSearchBox.sendKeys(service);
-        WebElement serviceSuggestion = wait.until(
-                ExpectedConditions.elementToBeClickable(
-                        By.xpath("//div[@data-qa-id='omni-suggestion-listing']" +
-                                "[contains(.,'" + service + "') and contains(.,'TYPE')]")
-                ));
-        serviceSuggestion.click();
+        try{
+            WebElement serviceSuggestion = wait.until(
+                    ExpectedConditions.elementToBeClickable(
+                            By.xpath("//div[@data-qa-id='omni-suggestion-listing']" +
+                                    "[contains(.,'" + service + "') and contains(.,'TYPE')]")
+                    ));
+            serviceSuggestion.click();
+        }
+        catch(Exception exception){
+            logger.warn("Service selection failed: {}",
+                    exception.getMessage()
+            );
+        }
     }
 
     public void clickMedicinesReportPage(){

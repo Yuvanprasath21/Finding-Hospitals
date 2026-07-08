@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 public class TC_10_DoctorCount extends BaseTest {
 
     @Test
-    public void verifyDoctorCountMatches() {
+    public void verifyDoctorCount() {
         logger.info("Starting : {}", this.getClass().getSimpleName());
         logger.info("Verifying displayed doctor count matches expected value");
 

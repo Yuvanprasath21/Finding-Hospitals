@@ -3,6 +3,7 @@ package org.hospital.pages;
 import basepage.BasePage;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.LinkedHashSet;
 import java.util.List;
@@ -29,6 +30,7 @@ public class SearchResultPage extends BasePage {
     WebElement title;
 
     public boolean isElementVisible(){
+        wait.until(ExpectedConditions.visibilityOf(title));
         return title.isDisplayed();
     }
 

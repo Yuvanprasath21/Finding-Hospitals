@@ -9,7 +9,7 @@ import java.util.Set;
 
 @Test
 public class TC_03_Open24x7Hospitals extends BaseTest {
-    public void verify_timing(){
+    public void verifyTiming(){
         logger.info("Starting : {}", this.getClass().getSimpleName());
         logger.info("Retrieving hospitals operating 24x7");
 

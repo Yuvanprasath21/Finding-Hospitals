@@ -9,7 +9,7 @@ import java.util.Set;
 
 @Test
 public class TC_04_HighRatedHospitals extends BaseTest {
-    public void verify_rating() {
+    public void verifyRating() {
         logger.info("Starting : {}", this.getClass().getSimpleName());
         logger.info("Retrieving hospitals with rating greater than 3.5");
 

@@ -7,7 +7,7 @@ import org.testng.annotations.Test;
 
 @Test
 public class TC_05_BookVisitButton extends BaseTest {
-    public void verify_button() {
+    public void verifyButton() {
         logger.info("Starting : {}", this.getClass().getSimpleName());
         logger.info("Verifying Book Visit button clickability");
 

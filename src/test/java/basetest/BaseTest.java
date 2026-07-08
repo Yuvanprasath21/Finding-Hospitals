@@ -5,6 +5,7 @@ import org.apache.logging.log4j.Logger;
 import org.hospital.pages.HomePage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -21,8 +22,8 @@ public class BaseTest {
 
     @BeforeClass
     public void setDriver() {
-        logger.info("Initializing Chrome Driver");
-        driver = new ChromeDriver();
+        logger.info("Initializing Edge Driver");
+        driver = new EdgeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         String url = ConfigReader.getProperty("website_url");
