@@ -18,28 +18,27 @@ public class ExtentReportManager implements ITestListener {
     @Override
     public void onStart(ITestContext context) {
 
-        String reportPath = System.getProperty("user.dir")
-                + "/reports/ExtentReport.html";
+        String reportPath = System.getProperty("user.dir") + "/reports/ExtentReport.html";
 
         ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
 
         sparkReporter.config().setDocumentTitle("Automation Report");
-        sparkReporter.config().setReportName("Isha Homes Automation Testing");
+        sparkReporter.config().setReportName("practo.com - Automation Testing");
         sparkReporter.config().setTheme(Theme.STANDARD);
 
         extent = new ExtentReports();
         extent.attachReporter(sparkReporter);
 
         // System Information
-        extent.setSystemInfo("Project", "Isha Homes Automation");
-        extent.setSystemInfo("Environment", "QA");
-        extent.setSystemInfo("Browser", "Chrome");
+        extent.setSystemInfo("Project", "Automation Testing");
+        extent.setSystemInfo("Website", "https://practo.com/");
+        extent.setSystemInfo("Environment", "QEA");
+        extent.setSystemInfo("Browsers", "Chrome, Edge");
         extent.setSystemInfo("OS", System.getProperty("os.name"));
         extent.setSystemInfo("Java Version", System.getProperty("java.version"));
 
         // Team Members
-        extent.setSystemInfo("Testers",
-                "Kiranmoorthy, Abinaya, Yuvan, Bindhu");
+        extent.setSystemInfo("Testers", "Kiranmoorthy, Abinaya, Yuvan, Bindhu");
 
     }
 
