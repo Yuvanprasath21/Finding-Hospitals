@@ -86,9 +86,7 @@ public class DiagnosticsPage extends BasePage {
     }
 
     public void clickBookButton() {
-        wait.until(ExpectedConditions.presenceOfElementLocated(
-                By.xpath("(//span[@data-aid='m-popular-package-book'])[1]")
-        ));
+        wait.until(ExpectedConditions.visibilityOf(bookButton));
         scrollIntoCenterView(bookButton);
         wait.until(ExpectedConditions.elementToBeClickable(bookButton));
         try {
@@ -96,20 +94,9 @@ public class DiagnosticsPage extends BasePage {
         } catch (Exception e) {
             clickByJS(bookButton);
         }
-
-        // Wait for navigation to user-details page
-        wait.until(ExpectedConditions.urlContains("user-details"));
-
-        // Then wait for the patient-name field on that page
-        wait.until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("//input[@data-aid='patient-name']")
-        ));
-
-        System.out.println("Patient details page loaded: " + driver.getCurrentUrl());
     }
 
     public void clickAddToCart() {
-        //slowScrollToElement(addToCartButton);
         wait.until(ExpectedConditions.visibilityOf(addToCartButton));
         clickByJS(addToCartButton);
     }
@@ -140,6 +127,7 @@ public class DiagnosticsPage extends BasePage {
     }
 
     public void enterPatientName(String name) {
+        wait.until(ExpectedConditions.urlContains("user-details"));
         wait.until(ExpectedConditions.visibilityOf(patientName));
         patientName.clear();
         patientName.sendKeys(name);

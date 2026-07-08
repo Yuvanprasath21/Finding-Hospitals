@@ -4,8 +4,6 @@ import basetest.BaseTest;
 import org.hospital.pages.DiagnosticsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utilities.ConfigReader;
-
 import java.util.List;
 
 public class TC_11_DoctorsNearYou extends BaseTest {

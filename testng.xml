@@ -19,11 +19,11 @@
             <class name="org.hospital.tests.TC_13_AddFirstTestToCart"/>
             <class name="org.hospital.tests.TC_14_AddSecondTestToCart"/>
             <class name="org.hospital.tests.TC_15_InvalidPatientDetails"/>
-<!--            <class name="org.hospital.tests.TC_16_ValidWellness"/>-->
-<!--            <class name="org.hospital.tests.TC_17_InvalidWellness"/>-->
-<!--            <class name="org.hospital.tests.TC_18_PainRelifTablet"/>-->
-<!--            <class name="org.hospital.tests.TC_19_HeartHealthTablet"/>-->
-<!--            <class name="org.hospital.tests.TC_20_DoctorCount"/>-->
+            <class name="org.hospital.tests.TC_16_ValidWellness"/>
+            <class name="org.hospital.tests.TC_17_InvalidWellness"/>
+            <class name="org.hospital.tests.TC_18_PainRelifTablet"/>
+            <class name="org.hospital.tests.TC_19_HeartHealthTablet"/>
+            <class name="org.hospital.tests.TC_20_SocialMediaLInks"/>
         </classes>
     </test>
 </suite>

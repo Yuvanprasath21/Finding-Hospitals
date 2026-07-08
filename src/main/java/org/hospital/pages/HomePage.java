@@ -22,6 +22,27 @@ public class HomePage extends BasePage {
     @FindBy(xpath = "//div[@data-qa-id='omni-suggestion-entire-city']")
     WebElement searchInEntireCity;
 
+    @FindBy(xpath = "//a[contains(@data-qa-id,'footer-item')]//span[text()='Read about medicines']")
+    WebElement medicine;
+
+    @FindBy(xpath = "//a[contains(@data-qa-id,'footer-item')]//span[text()='Wellness Plans']")
+    WebElement wellness;
+
+    @FindBy(xpath = "//span[text()='Facebook']/ancestor::a")
+    WebElement facebookLink;
+
+    @FindBy(xpath = "//span[text()='Twitter']/ancestor::a")
+    WebElement twitterLink;
+
+    @FindBy(xpath = "//span[text()='LinkedIn']/ancestor::a")
+    WebElement linkedInLink;
+
+    @FindBy(xpath = "//span[text()='Youtube']/ancestor::a")
+    WebElement youtubeLink;
+
+    @FindBy(xpath = "//span[text()='GitHub']/ancestor::a")
+    WebElement githubLink;
+
     public void findAndClickCity(String city) {
 
         city = capitalize(city);
@@ -53,5 +74,73 @@ public class HomePage extends BasePage {
                 ));
         serviceSuggestion.click();
     }
+
+    public void clickMedicinesReportPage(){
+        scrollIntoView(medicine);
+        wait.until(ExpectedConditions.elementToBeClickable(medicine)).click();
+    }
+
+    public void clickWellness(){
+        scrollIntoView(wellness);
+        wait.until(ExpectedConditions.elementToBeClickable(wellness)).click();
+    }
+
+    public void switchToNewTab() {
+        String originalTab = driver.getWindowHandle();
+        wait.until(d -> d.getWindowHandles().size() > 1);
+        for (String handle : driver.getWindowHandles()) {
+            if (!handle.equals(originalTab)) {
+                driver.switchTo().window(handle);
+                break;
+            }
+        }
+    }
+
+    public boolean verifyFacebookLink() {
+        return verifyLink(facebookLink, "facebook");
+    }
+
+    public boolean verifyTwitterLink() {
+        return verifyLink(twitterLink, "twitter");
+    }
+
+    public boolean verifyLinkedInLink() {
+        return verifyLink(linkedInLink, "linkedin");
+    }
+
+    public boolean verifyYoutubeLink() {
+        return verifyLink(youtubeLink, "youtube");
+    }
+
+    public boolean verifyGithubLink() {
+        return verifyLink(githubLink, "github");
+    }
+
+    public boolean verifyLink(WebElement link, String expectedUrlPart) {
+        String parentWindow = driver.getWindowHandle();
+        try {
+            scrollIntoView(link);
+            clickByJS(link);
+            wait.until(d -> d.getWindowHandles().size() > 1);
+            for (String handle : driver.getWindowHandles()) {
+                if (!handle.equals(parentWindow)) {
+                    driver.switchTo().window(handle);
+                    String currentUrl = driver.getCurrentUrl().toLowerCase();
+                    driver.close();
+                    driver.switchTo().window(parentWindow);
+                    return currentUrl.contains(
+                            expectedUrlPart.toLowerCase());
+                }
+            }
+        } catch (Exception e) {
+            logger.warn("{} link verification failed: {}",
+                    expectedUrlPart,
+                    e.getMessage());
+        }
+        driver.switchTo().window(parentWindow);
+        return false;
+    }
+
+
 
 }
