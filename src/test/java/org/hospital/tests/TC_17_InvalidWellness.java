@@ -6,6 +6,7 @@ import org.hospital.pages.WellnessPlanPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.ExcelUtils;
+import utilities.ScreenshotUtils;
 
 public class TC_17_InvalidWellness extends BaseTest {
 
@@ -20,10 +21,12 @@ public class TC_17_InvalidWellness extends BaseTest {
         logger.info("Initializing WellnessPlanPage");
         WellnessPlanPage wellnessPage = new WellnessPlanPage(driver);
         logger.info("Entering invalid wellness plan details");
-        String[] data = ExcelUtils.getFormData(1);
+        String[] data = ExcelUtils.getWellnessFormData(1);
         boolean isButtonEnabled = wellnessPage.enterDetails(data);
         logger.info("Submit button enabled status : {}", isButtonEnabled);
         logger.info("Verifying submit button is disabled for invalid inputs");
+        logger.info("Taking Screenshot");
+        ScreenshotUtils.takeScreenShot(driver,"TC_17_InvalidWellnessForm");
         Assert.assertFalse(
                 isButtonEnabled,
                 "Submit button should be DISABLED for invalid inputs but was enabled."

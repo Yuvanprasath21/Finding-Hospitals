@@ -1,7 +1,6 @@
 package org.hospital.pages;
 
 import basepage.BasePage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -228,4 +227,11 @@ public class DiagnosticsPage extends BasePage {
                 && invalidEmailMsg.isDisplayed();
     }
 
+    public void enterDetails(String[] data) {
+        enterPatientName(data[0]);
+        enterPatientAge(data[1]);
+        enterMobile(data[2]);
+        enterEmail(data[3]);
+        triggerEmailValidation();
+    }
 }

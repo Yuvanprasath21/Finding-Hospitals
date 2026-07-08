@@ -6,6 +6,9 @@ import org.hospital.pages.SearchResultPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.ConfigReader;
+import utilities.ScreenshotUtils;
+
+import java.io.IOException;
 
 @Test
 public class TC_01_LocationAndService extends BaseTest {
@@ -37,6 +40,8 @@ public class TC_01_LocationAndService extends BaseTest {
                 title.contains(city) && title.contains(service)
                 ,"Page is not loaded correctly for location and service"
         );
+        logger.info("Taking Screenshot");
+        ScreenshotUtils.takeScreenShot(driver,"TC_01_LocationAndService");
         logger.info("Location and Service validation completed successfully");
         logger.info("Ending : {}", this.getClass().getSimpleName());
     }

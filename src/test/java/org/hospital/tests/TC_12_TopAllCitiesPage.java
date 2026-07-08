@@ -4,6 +4,7 @@ import basetest.BaseTest;
 import org.hospital.pages.DiagnosticsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utilities.ScreenshotUtils;
 
 import java.io.IOException;
 import java.util.List;
@@ -19,6 +20,8 @@ public class TC_12_TopAllCitiesPage extends BaseTest {
 
         logger.info("Clicking Diagnostics menu");
         diagnostics.clickDiagnostics();
+        logger.info("Taking Screenshot");
+        ScreenshotUtils.takeScreenShot(driver,"TC_12_TopCitiesAndAllCities");
         Assert.assertTrue(
                 diagnostics.isDiagnosticsPageOpened(),
                 "User did NOT navigate to Diagnostics page"

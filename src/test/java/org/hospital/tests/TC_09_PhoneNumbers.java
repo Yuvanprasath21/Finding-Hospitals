@@ -4,6 +4,7 @@ import basetest.BaseTest;
 import org.hospital.pages.ParkingFacilityPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utilities.ScreenshotUtils;
 
 import java.util.List;
 
@@ -17,6 +18,8 @@ public class TC_09_PhoneNumbers extends BaseTest {
         navigateToSearchResults();
         ParkingFacilityPage page = new ParkingFacilityPage(driver);
         List<String> phones = page.getPhoneNumbers();
+        logger.info("Taking Screenshot");
+        ScreenshotUtils.takeScreenShot(driver,"TC_09_PhoneNumber");
         logger.info("Captured phone numbers: {}", phones);
         Assert.assertFalse(
                 phones.isEmpty(),

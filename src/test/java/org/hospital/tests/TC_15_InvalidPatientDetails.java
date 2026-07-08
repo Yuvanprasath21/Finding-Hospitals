@@ -4,6 +4,8 @@ import basetest.BaseTest;
 import org.hospital.pages.DiagnosticsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utilities.ExcelUtils;
+import utilities.ScreenshotUtils;
 
 public class TC_15_InvalidPatientDetails extends BaseTest {
 
@@ -29,11 +31,10 @@ public class TC_15_InvalidPatientDetails extends BaseTest {
         diagnostics.clickBookButton();
 
         logger.info("Entering patient details");
-        diagnostics.enterPatientName("John Doe");
-        diagnostics.enterPatientAge("25");
-        diagnostics.enterMobile("1234567890");
-        diagnostics.enterEmail("john213gmail");
-        diagnostics.triggerEmailValidation();
+        String[] data = ExcelUtils.getPatientFormData();
+        diagnostics.enterDetails(data);
+        logger.info("Taking Screenshot");
+        ScreenshotUtils.takeScreenShot(driver,"TC_15_InvalidDetails");
         Assert.assertTrue(
                 diagnostics.areValidationMessagesDisplayed(),
                 "Validation messages are not displayed"

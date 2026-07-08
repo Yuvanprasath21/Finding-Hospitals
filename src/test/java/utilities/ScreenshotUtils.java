@@ -9,16 +9,17 @@ import java.io.File;
 import java.io.IOException;
 
 public class ScreenshotUtils {
-    public static void takeScreenShot(WebDriver driver, String fileName) throws IOException {
+    public static void takeScreenShot(WebDriver driver, String fileName) {
         if (driver == null) {
             throw new IllegalStateException("Driver is not initialized");
         }
         File screenshotsDir = new File(System.getProperty("user.dir") + "/screenshots");
-        if (!screenshotsDir.exists()) {
-            throw new IOException("screenshots folder does not exist");
-        }
         File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         File destination = new File(screenshotsDir, fileName + ".png");
-        FileHandler.copy(src, destination);
+        try {
+            FileHandler.copy(src, destination);
+        } catch (IOException e) {
+            // pass
+        }
     }
 }

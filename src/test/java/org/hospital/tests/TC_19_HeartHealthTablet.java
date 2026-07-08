@@ -5,6 +5,7 @@ import org.hospital.pages.HomePage;
 import org.hospital.pages.MedicinePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utilities.ScreenshotUtils;
 
 import java.util.List;
 
@@ -25,6 +26,8 @@ public class TC_19_HeartHealthTablet extends BaseTest {
         logger.info("Collecting Heart Health medicine names");
         List<String> medicines = medicinePage.getHeartHealthMedicineNames();
         logger.info("Verifying medicine list is not null");
+        logger.info("Taking Screenshot");
+        ScreenshotUtils.takeScreenShot(driver,"TC_19_HeartHealthMedicineList");
         Assert.assertNotNull(
                 medicines,
                 "Medicine list is NULL."

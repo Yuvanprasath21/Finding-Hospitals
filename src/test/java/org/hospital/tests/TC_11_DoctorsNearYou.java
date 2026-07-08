@@ -4,6 +4,8 @@ import basetest.BaseTest;
 import org.hospital.pages.DiagnosticsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import utilities.ScreenshotUtils;
+
 import java.util.List;
 
 public class TC_11_DoctorsNearYou extends BaseTest {
@@ -15,6 +17,8 @@ public class TC_11_DoctorsNearYou extends BaseTest {
 
         logger.info("Clicking Find Doctors Near You");
         diagnostics.clickFindDoctorsNearYou();
+        logger.info("Taking Screenshot");
+        ScreenshotUtils.takeScreenShot(driver,"TC_11_DoctorNearYou");
         Assert.assertTrue(
                 diagnostics.isDoctorsPageOpened(),
                 "User did NOT navigate to Find Doctors page"
