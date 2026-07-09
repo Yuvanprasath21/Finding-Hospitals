@@ -51,6 +51,7 @@ public class WellnessPlanPage extends BasePage {
             new Select(interest)
                 .selectByIndex(Integer.parseInt(data[5]));
             try {
+                scrollIntoCenterView(button);
                 wait.until(ExpectedConditions.elementToBeClickable(button));
             }
             catch(Exception exception1){
