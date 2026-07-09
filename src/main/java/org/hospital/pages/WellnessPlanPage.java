@@ -55,7 +55,7 @@ public class WellnessPlanPage extends BasePage {
                 wait.until(ExpectedConditions.elementToBeClickable(button));
             }
             catch(Exception exception1){
-                //pass
+                logger.warn("Form Submit Button not clickable...");
             }
         } catch (Exception exception2) {
             logger.warn(
