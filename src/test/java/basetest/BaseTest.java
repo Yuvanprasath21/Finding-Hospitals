@@ -22,8 +22,8 @@ public class BaseTest {
 
     @BeforeClass
     public void setDriver() {
-        logger.info("Initializing Edge Driver");
-        driver = new EdgeDriver();
+        logger.info("Initializing Chrome Driver");
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         String url = ConfigReader.getProperty("website_url");
