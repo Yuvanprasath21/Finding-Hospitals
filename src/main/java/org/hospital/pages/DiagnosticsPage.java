@@ -22,7 +22,7 @@ public class DiagnosticsPage extends BasePage {
     @FindBy(xpath = "//a[@data-qa-id='popular-search-item']")
     List<WebElement> popularSearches;
 
-    @FindBy(xpath = "//a[contains(@href,'tests')]")
+    @FindBy(xpath = "//a[@aria-label='Lab Tests']")
     WebElement diagnosticsLink;
 
     @FindBy(xpath = "//div[normalize-space()='TOP CITIES']/following-sibling::ul/li//div[contains(@class,'o-f-color--primary')]")

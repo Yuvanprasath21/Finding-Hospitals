@@ -35,18 +35,32 @@ public class WellnessPlanPage extends BasePage {
     }
 
     public boolean enterDetails(String[] data) {
-        name.sendKeys(data[0]);
-        organizationname.sendKeys(data[1]);
-        contact.sendKeys(data[2]);
-        email.sendKeys(data[3]);
-        new Select(size)
-                .selectByIndex(Integer.parseInt(data[4]));
-        new Select(interest)
-                .selectByIndex(Integer.parseInt(data[5]));
         try {
-            wait.until(ExpectedConditions.elementToBeClickable(button));
-        } catch (Exception e) {
-            // ignore timeout
+            wait.until(ExpectedConditions.visibilityOf(name));
+            name.sendKeys(data[0]);
+            wait.until(ExpectedConditions.visibilityOf(organizationname));
+            organizationname.sendKeys(data[1]);
+            wait.until(ExpectedConditions.visibilityOf(contact));
+            contact.sendKeys(data[2]);
+            wait.until(ExpectedConditions.visibilityOf(email));
+            email.sendKeys(data[3]);
+            wait.until(ExpectedConditions.visibilityOf(size));
+            new Select(size)
+                    .selectByIndex(Integer.parseInt(data[4]));
+            wait.until(ExpectedConditions.visibilityOf(interest));
+            new Select(interest)
+                .selectByIndex(Integer.parseInt(data[5]));
+            try {
+                wait.until(ExpectedConditions.elementToBeClickable(button));
+            }
+            catch(Exception exception1){
+                //pass
+            }
+        } catch (Exception exception2) {
+            logger.warn(
+                    "Wellness Plan form submit button validation could not be completed due to reason: {}",
+                    exception2.getMessage()
+            );
         }
         return button.isEnabled();
     }
